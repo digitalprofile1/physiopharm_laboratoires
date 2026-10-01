@@ -271,29 +271,6 @@
       color: var(--brand);
     }
 
-    .role {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 8px;
-      padding: 5px 14px;
-      border-radius: 999px;
-      background: var(--soft);
-      color: var(--deep);
-      font-size: .82rem;
-      font-weight: 600;
-    }
-
-    .role svg {
-      width: 15px;
-      height: 15px;
-      fill: none;
-      stroke: var(--brand);
-      stroke-width: 2.4;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
     .desc {
       margin: 16px auto 22px;
       max-width: 36ch;
@@ -332,11 +309,21 @@
       animation-delay: calc(.35s + var(--i) * .08s);
     }
 
-    a.link:hover,
-    a.link:active {
+    a.link:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 24px rgba(86, 88, 166, .22);
       background: #fff;
+    }
+
+    a.link:active {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(86, 88, 166, .14);
+      background: rgba(255, 255, 255, .92);
+    }
+
+    a.link.main:hover,
+    a.link.main:active {
+      background: var(--brand);
     }
 
     .ic {
@@ -537,16 +524,6 @@
     <p class="dr" data-i18n="dr">
       Dr Hassan Bella
     </p>
-
-    <span class="role">
-      <svg viewBox="0 0 48 48">
-        <use href="#mortar"/>
-      </svg>
-
-      <span data-i18n="role">
-        Pharmacien
-      </span>
-    </span>
 
     <p class="desc" data-i18n="desc"></p>
 
