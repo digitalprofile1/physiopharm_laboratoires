@@ -1,198 +1,852 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#5658a6">
-<title>PHYSIOPHARM LABORATOIRES – Dr Hassan BELLA</title>
-<link rel="icon" href="img/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --brand:#5658a6; --deep:#2d2f72; --mid:#7b7dc4; --soft:#e9ebfa; --bg:#f6f7fe; --ink:#23244f; --muted:#62648f; --white:#fff;
-  --font:'Sora','Cairo',system-ui,sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html{height:100%}
-body{
-  min-height:100%;font-family:var(--font);color:var(--ink);
-  background:radial-gradient(circle at 15% 10%,#dfe2f8 0,transparent 45%),radial-gradient(circle at 90% 85%,#d3d6f3 0,transparent 45%),var(--bg);
-  padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);overflow-x:hidden;position:relative
-}
-html[lang=ar] body{font-family:'Cairo','Sora',sans-serif}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#5658a6">
 
-/* decorations */
-#decor{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-#decor svg{position:absolute;fill:none;stroke:var(--brand);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;opacity:.16;animation:float var(--d,9s) ease-in-out infinite;animation-delay:var(--l,0s)}
-#decor svg.f{fill:var(--brand);stroke:none;opacity:.07}
-@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-22px) rotate(calc(var(--r,0deg) + 14deg))}}
+  <title>PHYSIOPHARM LABORATOIRES – Dr Hassan Bella</title>
 
-/* language switch */
-.lang{position:fixed;top:calc(env(safe-area-inset-top) + 12px);right:12px;z-index:10;display:flex;gap:2px;padding:4px;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-radius:999px;box-shadow:0 4px 16px rgba(45,47,114,.15);direction:ltr}
-.lang button{border:0;background:none;font:600 12px var(--font);color:var(--muted);padding:7px 12px;border-radius:999px;cursor:pointer;transition:.2s}
-.lang button[aria-pressed=true]{background:var(--brand);color:#fff}
-.lang button:focus-visible,.link:focus-visible{outline:3px solid var(--deep);outline-offset:2px}
+  <link rel="icon" href="img/logo.png">
 
-/* layout */
-main{position:relative;z-index:1;max-width:460px;margin:0 auto;padding:64px 18px 28px;text-align:center}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-/* logo with orbit */
-.logo-wrap{position:relative;width:210px;height:210px;margin:0 auto 18px;display:grid;place-items:center}
-.logo{width:168px;height:168px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 12px 34px rgba(86,88,166,.3);position:relative;z-index:2;overflow:hidden}
-.logo img{width:96%;height:auto;display:block}
-.ring{position:absolute;inset:0;border-radius:50%;border:2px dashed var(--mid);animation:spin 28s linear infinite}
-.ring.r2{inset:14px;border:1.5px solid rgba(86,88,166,.25);animation:spin 18s linear infinite reverse}
-.orbit{position:absolute;inset:0;animation:spin var(--s,8s) linear infinite}
-.orbit i{position:absolute;top:-6px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(86,88,166,.2)}
-.orbit.o2{inset:14px;--s:12s;animation-direction:reverse}
-.orbit.o2 i{width:10px;height:10px;margin-left:-5px;top:-4px;background:var(--mid)}
-.pulse{position:absolute;inset:20px;border-radius:50%;border:2px solid var(--brand);opacity:0;animation:pulse 3.2s ease-out infinite}
-.pulse.p2{animation-delay:1.6s}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes pulse{0%{transform:scale(.8);opacity:.5}100%{transform:scale(1.25);opacity:0}}
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-/* identity */
-h1{font-size:1.45rem;font-weight:700;color:var(--deep);letter-spacing:.01em}
-.dr{margin-top:6px;font-size:1.05rem;font-weight:600;color:var(--brand)}
-.role{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:5px 14px;border-radius:999px;background:var(--soft);color:var(--deep);font-size:.82rem;font-weight:600}
-.role svg{width:15px;height:15px;fill:none;stroke:var(--brand);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-.desc{margin:16px auto 22px;max-width:36ch;font-size:.92rem;line-height:1.65;color:var(--muted)}
-html[lang=ar] .desc{line-height:1.9}
+  <style>
+    :root {
+      --brand: #5658a6;
+      --deep: #2d2f72;
+      --mid: #7b7dc4;
+      --soft: #e9ebfa;
+      --bg: #f6f7fe;
+      --ink: #23244f;
+      --muted: #62648f;
+      --white: #fff;
+      --font: 'Sora', system-ui, sans-serif;
+    }
 
-/* links */
-.links{display:grid;gap:11px;text-align:start}
-.link{display:flex;align-items:center;gap:14px;padding:13px 16px;background:rgba(255,255,255,.92);border:1px solid rgba(86,88,166,.14);border-radius:18px;color:var(--ink);text-decoration:none;box-shadow:0 4px 14px rgba(45,47,114,.08);transition:transform .2s,box-shadow .2s,background .2s;opacity:0;transform:translateY(14px);animation:in .6s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(.35s + var(--i)*.08s)}
-a.link:hover,a.link:active{transform:translateY(-2px);box-shadow:0 10px 24px rgba(86,88,166,.22);background:#fff}
-.ic{flex:none;width:44px;height:44px;border-radius:14px;background:var(--brand);display:grid;place-items:center}
-.ic svg{width:22px;height:22px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.link.main{background:var(--brand);color:#fff;border-color:transparent}
-.link.main .ic{background:rgba(255,255,255,.2)}
-.link.main small{color:#e3e4fa}
-.txt{min-width:0;flex:1}
-.txt b{display:block;font-size:.95rem;font-weight:600}
-.txt small{display:block;margin-top:2px;font-size:.8rem;color:var(--muted);overflow-wrap:anywhere;direction:ltr;text-align:start}
-.txt small.addr{direction:inherit}
-html[dir=rtl] .txt small{text-align:right}
-.chev{flex:none;width:18px;height:18px;fill:none;stroke:var(--mid);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-.link.main .chev{stroke:#fff}
-html[dir=rtl] .chev{transform:scaleX(-1)}
-@keyframes in{to{opacity:1;transform:none}}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
 
+    html {
+      height: 100%;
+    }
 
-footer{margin-top:26px;font-size:.75rem;color:var(--muted)}
-footer svg{width:60px;height:14px;fill:none;stroke:var(--mid);stroke-width:2;display:block;margin:0 auto 8px}
+    body {
+      min-height: 100%;
+      font-family: var(--font);
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 10%, #dfe2f8 0, transparent 45%),
+        radial-gradient(circle at 90% 85%, #d3d6f3 0, transparent 45%),
+        var(--bg);
+      padding:
+        env(safe-area-inset-top)
+        0
+        env(safe-area-inset-bottom);
+      overflow-x: hidden;
+      position: relative;
+    }
 
-@media (prefers-reduced-motion:reduce){*{animation:none!important}.link,}
-</style>
+    /* Decorations */
+
+    #decor {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    #decor svg {
+      position: absolute;
+      fill: none;
+      stroke: var(--brand);
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: .16;
+      animation: float var(--d, 9s) ease-in-out infinite;
+      animation-delay: var(--l, 0s);
+    }
+
+    #decor svg.f {
+      fill: var(--brand);
+      stroke: none;
+      opacity: .07;
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0) rotate(var(--r, 0deg));
+      }
+
+      50% {
+        transform:
+          translateY(-22px)
+          rotate(calc(var(--r, 0deg) + 14deg));
+      }
+    }
+
+    /* Language switch */
+
+    .lang {
+      position: fixed;
+      top: calc(env(safe-area-inset-top) + 12px);
+      right: 12px;
+      z-index: 10;
+      display: flex;
+      gap: 2px;
+      padding: 4px;
+      background: rgba(255, 255, 255, .85);
+      backdrop-filter: blur(8px);
+      border-radius: 999px;
+      box-shadow: 0 4px 16px rgba(45, 47, 114, .15);
+    }
+
+    .lang button {
+      border: 0;
+      background: none;
+      font: 600 12px var(--font);
+      color: var(--muted);
+      padding: 7px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .lang button[aria-pressed="true"] {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .lang button:focus-visible,
+    .link:focus-visible {
+      outline: 3px solid var(--deep);
+      outline-offset: 2px;
+    }
+
+    /* Layout */
+
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 460px;
+      margin: 0 auto;
+      padding: 64px 18px 28px;
+      text-align: center;
+    }
+
+    /* Logo */
+
+    .logo-wrap {
+      position: relative;
+      width: 210px;
+      height: 210px;
+      margin: 0 auto 18px;
+      display: grid;
+      place-items: center;
+    }
+
+    .logo {
+      width: 168px;
+      height: 168px;
+      border-radius: 50%;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 12px 34px rgba(86, 88, 166, .3);
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .logo img {
+      width: 96%;
+      height: auto;
+      display: block;
+    }
+
+    .ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 2px dashed var(--mid);
+      animation: spin 28s linear infinite;
+    }
+
+    .ring.r2 {
+      inset: 14px;
+      border: 1.5px solid rgba(86, 88, 166, .25);
+      animation: spin 18s linear infinite reverse;
+    }
+
+    .orbit {
+      position: absolute;
+      inset: 0;
+      animation: spin var(--s, 8s) linear infinite;
+    }
+
+    .orbit i {
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      width: 14px;
+      height: 14px;
+      margin-left: -7px;
+      border-radius: 50%;
+      background: var(--brand);
+      box-shadow: 0 0 0 4px rgba(86, 88, 166, .2);
+    }
+
+    .orbit.o2 {
+      inset: 14px;
+      --s: 12s;
+      animation-direction: reverse;
+    }
+
+    .orbit.o2 i {
+      width: 10px;
+      height: 10px;
+      margin-left: -5px;
+      top: -4px;
+      background: var(--mid);
+    }
+
+    .pulse {
+      position: absolute;
+      inset: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--brand);
+      opacity: 0;
+      animation: pulse 3.2s ease-out infinite;
+    }
+
+    .pulse.p2 {
+      animation-delay: 1.6s;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(.8);
+        opacity: .5;
+      }
+
+      100% {
+        transform: scale(1.25);
+        opacity: 0;
+      }
+    }
+
+    /* Identity */
+
+    h1 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--deep);
+      letter-spacing: .01em;
+    }
+
+    .dr {
+      margin-top: 6px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--brand);
+    }
+
+    .role {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--deep);
+      font-size: .82rem;
+      font-weight: 600;
+    }
+
+    .role svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: var(--brand);
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .desc {
+      margin: 16px auto 22px;
+      max-width: 36ch;
+      font-size: .92rem;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    /* Links */
+
+    .links {
+      display: grid;
+      gap: 11px;
+      text-align: start;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 13px 16px;
+      background: rgba(255, 255, 255, .92);
+      border: 1px solid rgba(86, 88, 166, .14);
+      border-radius: 18px;
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(45, 47, 114, .08);
+      transition:
+        transform .2s,
+        box-shadow .2s,
+        background .2s;
+      opacity: 0;
+      transform: translateY(14px);
+      animation:
+        in .6s cubic-bezier(.2, .8, .2, 1) forwards;
+      animation-delay: calc(.35s + var(--i) * .08s);
+    }
+
+    a.link:hover,
+    a.link:active {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(86, 88, 166, .22);
+      background: #fff;
+    }
+
+    .ic {
+      flex: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: var(--brand);
+      display: grid;
+      place-items: center;
+    }
+
+    .ic svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .link.main {
+      background: var(--brand);
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .link.main .ic {
+      background: rgba(255, 255, 255, .2);
+    }
+
+    .link.main small {
+      color: #e3e4fa;
+    }
+
+    .txt {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .txt b {
+      display: block;
+      font-size: .95rem;
+      font-weight: 600;
+    }
+
+    .txt small {
+      display: block;
+      margin-top: 2px;
+      font-size: .8rem;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+      direction: ltr;
+      text-align: start;
+    }
+
+    .txt small.addr {
+      direction: inherit;
+    }
+
+    .chev {
+      flex: none;
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: var(--mid);
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .link.main .chev {
+      stroke: #fff;
+    }
+
+    @keyframes in {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    footer {
+      margin-top: 26px;
+      font-size: .75rem;
+      color: var(--muted);
+    }
+
+    footer svg {
+      width: 60px;
+      height: 14px;
+      fill: none;
+      stroke: var(--mid);
+      stroke-width: 2;
+      display: block;
+      margin: 0 auto 8px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+      }
+
+      .link {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="capsule" viewBox="0 0 48 48"><rect x="3" y="15" width="42" height="18" rx="9"/><path d="M24 15v18"/></symbol>
-    <symbol id="capsule-f" viewBox="0 0 48 48"><rect x="3" y="15" width="42" height="18" rx="9"/></symbol>
-    <symbol id="pill" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M12 24h24"/></symbol>
-    <symbol id="cross" viewBox="0 0 48 48"><path d="M18 5h12v13h13v12H30v13H18V30H5V18h13z"/></symbol>
-    <symbol id="drop" viewBox="0 0 48 48"><path d="M24 4c8 10 14 16 14 24a14 14 0 0 1-28 0c0-8 6-14 14-24z"/></symbol>
-    <symbol id="mol" viewBox="0 0 48 48"><circle cx="14" cy="16" r="5"/><circle cx="34" cy="12" r="4"/><circle cx="26" cy="34" r="6"/><path d="M18 18l4 11M30 14l-3 15"/></symbol>
-    <symbol id="mortar" viewBox="0 0 48 48"><path d="M6 22h36c0 10-7 17-18 17S6 32 6 22z"/><path d="M28 20l11-13M16 43h16"/></symbol>
-    <symbol id="syringe" viewBox="0 0 48 48"><path d="M32 6l10 10M36 10L18 28l-5 8 8-5 18-18M8 40l5-5M24 18l6 6"/></symbol>
-    <symbol id="beat" viewBox="0 0 48 48"><path d="M3 26h10l5-12 9 22 5-10h13"/></symbol>
-    <symbol id="leaf" viewBox="0 0 48 48"><path d="M8 40C8 20 20 8 42 6c0 22-12 34-30 34zM8 40l20-20"/></symbol>
-  </defs>
-</svg>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
 
-<div id="decor" aria-hidden="true"></div>
+      <symbol id="capsule" viewBox="0 0 48 48">
+        <rect x="3" y="15" width="42" height="18" rx="9"/>
+        <path d="M24 15v18"/>
+      </symbol>
 
-<nav class="lang" aria-label="Language">
-  <button data-lang="fr" aria-pressed="true">FR</button>
-  <button data-lang="en" aria-pressed="false">EN</button>
-  <button data-lang="ar" aria-pressed="false">AR</button>
-</nav>
+      <symbol id="capsule-f" viewBox="0 0 48 48">
+        <rect x="3" y="15" width="42" height="18" rx="9"/>
+      </symbol>
 
-<main>
-  <div class="logo-wrap">
-    <span class="pulse"></span><span class="pulse p2"></span>
-    <span class="ring"></span><span class="ring r2"></span>
-    <span class="orbit"><i></i></span><span class="orbit o2"><i></i></span>
-    <div class="logo"><img src="img/logo.png" alt="Physiopharm Laboratoires"></div>
-  </div>
+      <symbol id="pill" viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="18"/>
+        <path d="M12 24h24"/>
+      </symbol>
 
-  <h1>PHYSIOPHARM LABORATOIRES</h1>
-  <p class="dr" data-i18n="dr">Dr Hassan BELLA</p>
-  <span class="role">
-    <svg viewBox="0 0 48 48"><use href="#mortar"/></svg>
-    <span data-i18n="role">Pharmacien</span>
-  </span>
-  <p class="desc" data-i18n="desc"></p>
+      <symbol id="cross" viewBox="0 0 48 48">
+        <path d="M18 5h12v13h13v12H30v13H18V30H5V18h13z"/>
+      </symbol>
 
-  <section class="links">
-    <a class="link main" style="--i:0" href="tel:+212661195353">
-      <span class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-      <span class="txt"><b data-i18n="call">Appeler</b><small>0661 195 353</small></span>
-      <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
-    </a>
-    <a class="link" style="--i:1" href="tel:+212528816323">
-      <span class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 9.5V21h14V9.5M9 21v-6h6v6"/></svg></span>
-      <span class="txt"><b data-i18n="fixe">Téléphone fixe</b><small>0528 816 323</small></span>
-      <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
-    </a>
-    <a class="link" style="--i:2" href="mailto:hassanbelle92@yahoo.fr">
-      <span class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span>
-      <span class="txt"><b data-i18n="mail1">E-mail du Dr Bella</b><small>hassanbelle92@yahoo.fr</small></span>
-      <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
-    </a>
-    <a class="link" style="--i:3" href="mailto:physiopharmlaboratoires@gmail.com">
-      <span class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span>
-      <span class="txt"><b data-i18n="mail2">E-mail du laboratoire</b><small>physiopharmlaboratoires@gmail.com</small></span>
-      <svg class="chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
-    </a>
-    <div class="link static" style="--i:4">
-      <span class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-      <span class="txt"><b data-i18n="addr">Adresse</b><small class="addr" data-i18n="addrv">N° 60, Zone Industrielle Sidi Bibi, Agadir, Maroc</small></span>
+      <symbol id="drop" viewBox="0 0 48 48">
+        <path d="M24 4c8 10 14 16 14 24a14 14 0 0 1-28 0c0-8 6-14 14-24z"/>
+      </symbol>
+
+      <symbol id="mol" viewBox="0 0 48 48">
+        <circle cx="14" cy="16" r="5"/>
+        <circle cx="34" cy="12" r="4"/>
+        <circle cx="26" cy="34" r="6"/>
+        <path d="M18 18l4 11M30 14l-3 15"/>
+      </symbol>
+
+      <symbol id="mortar" viewBox="0 0 48 48">
+        <path d="M6 22h36c0 10-7 17-18 17S6 32 6 22z"/>
+        <path d="M28 20l11-13M16 43h16"/>
+      </symbol>
+
+      <symbol id="syringe" viewBox="0 0 48 48">
+        <path d="M32 6l10 10M36 10L18 28l-5 8 8-5 18-18M8 40l5-5M24 18l6 6"/>
+      </symbol>
+
+      <symbol id="beat" viewBox="0 0 48 48">
+        <path d="M3 26h10l5-12 9 22 5-10h13"/>
+      </symbol>
+
+      <symbol id="leaf" viewBox="0 0 48 48">
+        <path d="M8 40C8 20 20 8 42 6c0 22-12 34-30 34zM8 40l20-20"/>
+      </symbol>
+
+    </defs>
+  </svg>
+
+  <div id="decor" aria-hidden="true"></div>
+
+  <nav class="lang" aria-label="Language">
+    <button data-lang="fr" aria-pressed="true">FR</button>
+    <button data-lang="en" aria-pressed="false">EN</button>
+  </nav>
+
+  <main>
+
+    <div class="logo-wrap">
+      <span class="pulse"></span>
+      <span class="pulse p2"></span>
+
+      <span class="ring"></span>
+      <span class="ring r2"></span>
+
+      <span class="orbit">
+        <i></i>
+      </span>
+
+      <span class="orbit o2">
+        <i></i>
+      </span>
+
+      <div class="logo">
+        <img src="img/logo.png" alt="Physiopharm Laboratoires">
+      </div>
     </div>
-  </section>
 
-  <footer>
-    <svg viewBox="0 0 60 14"><path d="M0 7h14l4-5 6 10 4-5h32"/></svg>
-    © 2026 PHYSIOPHARM LABORATOIRES
-  </footer>
-</main>
+    <h1>PHYSIOPHARM LABORATOIRES</h1>
 
-<script>
-/* ---------- translations ---------- */
-const T={
-fr:{dr:"Dr Hassan BELLA",role:"Pharmacien",desc:"Laboratoire pharmaceutique basé à Agadir. Le Dr Hassan Bella vous accompagne avec des produits de qualité, pour votre santé et votre bien-être.",call:"Appeler",fixe:"Téléphone fixe",mail1:"E-mail du Dr Bella",mail2:"E-mail du laboratoire",addr:"Adresse",addrv:"N° 60, Zone Industrielle Sidi Bibi, Agadir, Maroc"},
-en:{dr:"Dr Hassan BELLA",role:"Pharmacist",desc:"Pharmaceutical laboratory based in Agadir. Dr Hassan Bella supports you with quality products for your health and well-being.",call:"Call",fixe:"Landline",mail1:"Dr Bella's email",mail2:"Laboratory email",addr:"Address",addrv:"No. 60, Sidi Bibi Industrial Zone, Agadir, Morocco"},
-ar:{dr:"الدكتور حسن بلا",role:"صيدلاني",desc:"مختبر صيدلاني يقع في أكادير. يرافقكم الدكتور حسن بيلا بمنتجات عالية الجودة من أجل صحتكم وعافيتكم.",call:"اتصل بنا",fixe:"الهاتف الثابت",mail1:"البريد الإلكتروني للدكتور",mail2:"البريد الإلكتروني للمختبر",addr:"العنوان",addrv:"رقم 60، المنطقة الصناعية سيدي بيبي، أكادير، المغرب"}
-};
-function setLang(l){
-  if(!T[l])l="fr";
-  document.documentElement.lang=l;
-  document.documentElement.dir=l==="ar"?"rtl":"ltr";
-  document.querySelectorAll("[data-i18n]").forEach(e=>e.textContent=T[l][e.dataset.i18n]);
-  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===l));
-  try{localStorage.setItem("pp-lang",l)}catch(e){}
-}
-document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
-let saved="fr";try{saved=localStorage.getItem("pp-lang")||"fr"}catch(e){}
-setLang(saved);
+    <p class="dr" data-i18n="dr">
+      Dr Hassan Bella
+    </p>
 
-/* ---------- pharmacy background decorations ---------- */
-const syms=["capsule","pill","cross","drop","mol","mortar","syringe","beat","leaf","capsule-f","cross","pill"];
-const spots=[[4,6],[78,4],[40,12],[92,22],[10,26],[60,30],[85,42],[3,48],[48,52],[24,64],[72,66],[92,80],[8,84],[44,90],[64,92],[30,38],[18,10],[56,76]];
-const decor=document.getElementById("decor");
-spots.forEach((p,i)=>{
-  const s=syms[i%syms.length],size=34+(i*17)%38;
-  const el=document.createElementNS("http://www.w3.org/2000/svg","svg");
-  el.setAttribute("viewBox","0 0 48 48");
-  el.innerHTML='<use href="#'+s+'"/>';
-  if(s==="capsule-f"||i%7===0)el.classList.add("f");
-  el.style.cssText="left:"+p[0]+"%;top:"+p[1]+"%;width:"+size+"px;height:"+size+"px;--r:"+((i*37)%70-35)+"deg;--d:"+(7+i%5*1.6)+"s;--l:-"+(i*0.9)+"s";
-  decor.appendChild(el);
-});
-</script>
+    <span class="role">
+      <svg viewBox="0 0 48 48">
+        <use href="#mortar"/>
+      </svg>
+
+      <span data-i18n="role">
+        Pharmacien
+      </span>
+    </span>
+
+    <p class="desc" data-i18n="desc"></p>
+
+    <section class="links">
+
+      <a
+        class="link main"
+        style="--i:0"
+        href="tel:+212661195353"
+      >
+        <span class="ic">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </span>
+
+        <span class="txt">
+          <b data-i18n="call">Appeler</b>
+          <small>0661 195 353</small>
+        </span>
+
+        <svg class="chev" viewBox="0 0 24 24">
+          <path d="M9 6l6 6-6 6"/>
+        </svg>
+      </a>
+
+      <a
+        class="link"
+        style="--i:1"
+        href="tel:+212528816323"
+      >
+        <span class="ic">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 11l9-8 9 8M5 9.5V21h14V9.5M9 21v-6h6v6"/>
+          </svg>
+        </span>
+
+        <span class="txt">
+          <b data-i18n="fixe">Téléphone fixe</b>
+          <small>0528 816 323</small>
+        </span>
+
+        <svg class="chev" viewBox="0 0 24 24">
+          <path d="M9 6l6 6-6 6"/>
+        </svg>
+      </a>
+
+      <a
+        class="link"
+        style="--i:2"
+        href="mailto:hassanbelle92@yahoo.fr"
+      >
+        <span class="ic">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M22 6l-10 7L2 6"/>
+          </svg>
+        </span>
+
+        <span class="txt">
+          <b data-i18n="mail1">E-mail du Dr Bella</b>
+          <small>hassanbelle92@yahoo.fr</small>
+        </span>
+
+        <svg class="chev" viewBox="0 0 24 24">
+          <path d="M9 6l6 6-6 6"/>
+        </svg>
+      </a>
+
+      <a
+        class="link"
+        style="--i:3"
+        href="mailto:physiopharmlaboratoires@gmail.com"
+      >
+        <span class="ic">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M22 6l-10 7L2 6"/>
+          </svg>
+        </span>
+
+        <span class="txt">
+          <b data-i18n="mail2">E-mail du laboratoire</b>
+          <small>physiopharmlaboratoires@gmail.com</small>
+        </span>
+
+        <svg class="chev" viewBox="0 0 24 24">
+          <path d="M9 6l6 6-6 6"/>
+        </svg>
+      </a>
+
+      <div
+        class="link static"
+        style="--i:4"
+      >
+        <span class="ic">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </span>
+
+        <span class="txt">
+          <b data-i18n="addr">Adresse</b>
+          <small
+            class="addr"
+            data-i18n="addrv"
+          >
+            N° 60, Zone Industrielle Sidi Bibi, Agadir, Maroc
+          </small>
+        </span>
+      </div>
+
+    </section>
+
+    <footer>
+      <svg viewBox="0 0 60 14">
+        <path d="M0 7h14l4-5 6 10 4-5h32"/>
+      </svg>
+
+      © 2026 PHYSIOPHARM LABORATOIRES
+    </footer>
+
+  </main>
+
+  <script>
+    /* Translations */
+
+    const T = {
+      fr: {
+        dr: "Dr Hassan Bella",
+        role: "Pharmacien",
+        desc: "Le laboratoire PHYSIOPHARM développe et fabrique des produits dermo-cosmétiques, des soins corporels, des produits d’hygiène et des compléments alimentaires, alliant expertise scientifique, qualité et bien-être.",
+        call: "Appeler",
+        fixe: "Téléphone fixe",
+        mail1: "E-mail du Dr Bella",
+        mail2: "E-mail du laboratoire",
+        addr: "Adresse",
+        addrv: "N° 60, Zone Industrielle Sidi Bibi, Agadir, Maroc"
+      },
+
+      en: {
+        dr: "Dr Hassan Bella",
+        role: "Pharmacist",
+        desc: "PHYSIOPHARM laboratory develops and manufactures dermo-cosmetic products, body care products, hygiene products, and dietary supplements, combining scientific expertise, quality, and well-being.",
+        call: "Call",
+        fixe: "Landline",
+        mail1: "Dr Bella's email",
+        mail2: "Laboratory email",
+        addr: "Address",
+        addrv: "No. 60, Sidi Bibi Industrial Zone, Agadir, Morocco"
+      }
+    };
+
+    function setLang(lang) {
+      if (!T[lang]) {
+        lang = "fr";
+      }
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = "ltr";
+
+      document
+        .querySelectorAll("[data-i18n]")
+        .forEach(element => {
+          element.textContent =
+            T[lang][element.dataset.i18n];
+        });
+
+      document
+        .querySelectorAll(".lang button")
+        .forEach(button => {
+          button.setAttribute(
+            "aria-pressed",
+            button.dataset.lang === lang
+          );
+        });
+
+      try {
+        localStorage.setItem("pp-lang", lang);
+      } catch (error) {}
+    }
+
+    document
+      .querySelectorAll(".lang button")
+      .forEach(button => {
+        button.onclick = () =>
+          setLang(button.dataset.lang);
+      });
+
+    let saved = "fr";
+
+    try {
+      saved =
+        localStorage.getItem("pp-lang") || "fr";
+    } catch (error) {}
+
+    if (!T[saved]) {
+      saved = "fr";
+    }
+
+    setLang(saved);
+
+    /* Pharmacy background decorations */
+
+    const syms = [
+      "capsule",
+      "pill",
+      "cross",
+      "drop",
+      "mol",
+      "mortar",
+      "syringe",
+      "beat",
+      "leaf",
+      "capsule-f",
+      "cross",
+      "pill"
+    ];
+
+    const spots = [
+      [4, 6],
+      [78, 4],
+      [40, 12],
+      [92, 22],
+      [10, 26],
+      [60, 30],
+      [85, 42],
+      [3, 48],
+      [48, 52],
+      [24, 64],
+      [72, 66],
+      [92, 80],
+      [8, 84],
+      [44, 90],
+      [64, 92],
+      [30, 38],
+      [18, 10],
+      [56, 76]
+    ];
+
+    const decor =
+      document.getElementById("decor");
+
+    spots.forEach((position, index) => {
+      const symbol =
+        syms[index % syms.length];
+
+      const size =
+        34 + (index * 17) % 38;
+
+      const element =
+        document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "svg"
+        );
+
+      element.setAttribute(
+        "viewBox",
+        "0 0 48 48"
+      );
+
+      element.innerHTML =
+        '<use href="#' +
+        symbol +
+        '"/>';
+
+      if (
+        symbol === "capsule-f" ||
+        index % 7 === 0
+      ) {
+        element.classList.add("f");
+      }
+
+      element.style.cssText =
+        "left:" +
+        position[0] +
+        "%;" +
+        "top:" +
+        position[1] +
+        "%;" +
+        "width:" +
+        size +
+        "px;" +
+        "height:" +
+        size +
+        "px;" +
+        "--r:" +
+        ((index * 37) % 70 - 35) +
+        "deg;" +
+        "--d:" +
+        (7 + (index % 5) * 1.6) +
+        "s;" +
+        "--l:-" +
+        index * 0.9 +
+        "s";
+
+      decor.appendChild(element);
+    });
+  </script>
+
 </body>
 </html>
